@@ -1,0 +1,1197 @@
+// header
+.header{
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1) ;
+  z-index: 100;
+  position: relative;
+}
+
+.header-cont{
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include sp{
+    padding: 20px;
+  }
+}
+
+.header-logo{
+  transition: all 0.3s;
+  &:hover{
+    opacity: 0.7;
+  }
+  img{
+    @include sp{
+      width: 80%;
+    }
+  }
+}
+
+.header-nav-list{
+  display: flex;
+  li{
+    margin-right: 16px;
+    a{
+      color: $TextC900;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1;
+      transition: all 0.3s;
+      padding: 16px 8px;
+      &:hover{
+        color: $MainC;
+      }
+    }
+  }
+  .header-contact{
+    a{
+      color: $Neutral0;
+      padding: 16px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1;
+      &:hover{
+        color: $Neutral0;
+      }
+    }
+    margin-right: 0;
+  }
+}
+
+.header-nav-list{
+  @include tab{
+    display: none;
+  }
+}
+.menu-toggle {
+  display: none;
+  @include tab{
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 48px;
+    width: 44px;
+    padding: 0;
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    z-index: 100;
+  }
+}
+
+.menu-icon {
+  background-color: $TextC900;
+  height: 3px;
+  width: 100%;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out 0s;
+  position: absolute;
+  &:nth-child(1){
+    top: 8px;
+  }
+  &:nth-child(2){
+    top: 16px;
+  }
+  &:nth-child(3){
+    top: 24px;
+  }
+}
+.menu-label{
+  position: absolute;
+  top: 34px;
+  padding: 0 4px;
+  font-size: 14px;
+  color: $TextC900;
+  transition: all 0.3s ease-in-out 0s;
+  }
+
+.active{
+  .menu-toggle{
+    
+    .menu-icon{
+      @include tab{
+        &:nth-child(1){
+          -webkit-transform: translateY(0) rotate(225deg);
+          -ms-transform: translateY(0) rotate(225deg);
+          transform: translateY(0) rotate(225deg);
+          position: absolute;
+          top: 16px;
+          background-color: $TextC900;
+        }
+        &:nth-child(2){
+          -webkit-transform: translateY(0) rotate(-225deg);
+          -ms-transform: translateY(0) rotate(-225deg);
+          transform: translateY(0) rotate(-225deg);
+          background-color: $TextC900;
+        }
+        &:nth-child(3){
+          display: none;
+        }
+      }
+    }
+    .menu-label{
+      color: $TextC900;
+    }
+  }
+  .header-nav-list{
+    @include tab{
+      position: absolute;
+      height: 100vh;
+      background: $Neutral0;
+      top: 0;
+      width: 100%;
+      left: 0;
+      padding: 104px 24px 24px;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+      overflow-y: auto;
+      display: block;
+    }
+    li{
+      border: none;
+      margin-bottom: 0;
+      @include tab{
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
+      a{
+        @include tab{
+          width: 100%;
+          display: block;
+          padding: 16px;
+          color: $TextC900;
+          border-radius: 8px;
+          background-color: $Neutral0;
+          font-size: 20px;
+          border: 1px solid $TextC900;
+        }
+        @include sp{
+          font-size: 16px;
+        }
+      }
+    }
+    }
+  }
+
+
+// mv
+.mv{
+  padding: 40px 0;
+}
+.mv-cont{
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
+  @include sp{
+    flex-direction: column;
+  }
+}
+.mv-text{
+  width: 50%;
+  padding-top: 40px;
+  @include tab{
+    padding-top: 24px;
+  }
+  @include sp{
+    width: 100%;
+    order: 2;
+  }
+}
+.mv-ttl{
+  color: $TextC900;
+  line-height: 1.3;
+  font-size: 40px;
+  margin-bottom: 40px;
+  text-shadow: 0 4px 4px rgba(0,0,0,0.1);
+  @include tab{
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+  @include sp{
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+}
+.mv-subttl{
+  color: $TextC600;
+  line-height: 2;
+  letter-spacing: 0.02em;
+  font-weight: normal;
+  font-size: 16px;
+  @include tab{
+    font-size: 14px;
+  }
+}
+.mv-image{
+  width: 50%;
+  @include sp{
+    width: 100%;
+    order: 1;
+  }
+  img{
+    width: 100%;
+  }
+}
+
+// services
+.services{
+  background-color: $SubC100;
+  padding: 64px 0;
+  @include tab{
+    padding: 40px 0;
+  }
+}
+.ser-card-cont{
+  display: flex;
+  gap: 40px;
+  @include tab{
+    flex-direction: column;
+  }
+  @include sp{
+    gap: 20px;
+  }
+}
+.ser-card{
+  background-color: $Neutral0;
+  padding: 24px;
+  border-radius:12px;
+  width: 33.3%;
+  @include tab{
+    width: 100%;
+  }
+  @include sp{
+    padding: 16px;
+  }
+}
+.card-number{
+  display: block;
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 16px;
+  font-weight: bold;
+  color: $MainC100;
+  @include sp{
+    font-size: 40px;
+  }
+}
+.eng-label{
+  font-weight: bold;
+  color: $MainC;
+  font-size: 14px;
+}
+.ser-card-ttl{
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: $TextC900;
+  @include sp{
+    font-size: 20px;
+  }
+}
+.ser-card-text{
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 2;
+  color: $TextC600;
+  margin-bottom: 16px;
+  @include tab{
+    font-size: 14px;
+  }
+}
+.ser-card-cate{
+  li{
+    color: $MainC;
+    font-weight: bold;
+    border-radius: 24px;
+    background-color: $SubC100;
+    padding: 8px 12px;
+    line-height: 1;
+    display: inline-block;
+    font-size: 12px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+// work
+.work{
+  padding: 64px 0;
+  background-color: $Neutral0;
+  @include tab{
+    padding: 40px 0;
+  }
+}
+.work-card-cont{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 64px;
+  @include tab{
+    gap: 40px;
+  }
+  @include sp{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 32px;
+  }
+}
+.work-img{
+  width: 100%;
+  margin-bottom: 8px;
+}
+.work-cate{
+  margin-bottom:8px;
+  li{
+    color: $TextC300;
+    font-size: 14px;
+    font-weight: normal;
+    display: inline-block;
+    position: relative;
+    letter-spacing: 0.02em;
+    @include sp{
+      font-size: 12px;
+    }
+    &:not(:last-child)::after {
+      content: '';
+      display: inline-block;
+      width: 1px;
+      height: 1.5em;
+      background-color: $TextC300;
+      vertical-align: middle;
+      margin: 0 8px;
+    }
+  }
+}
+.work-hed{
+  font-size: 20px;
+  line-height: 1.5;
+  color: $TextC900;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+.work-text{
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 2;
+  color: $TextC600;
+  letter-spacing: 0.02em;
+  @include tab{
+    font-size: 14px;
+  }
+}
+
+// strength
+.strength{
+  background-color: $SubC100;
+  padding: 64px 0;
+  @include tab{
+    padding: 40px 0 10px;
+  }
+}
+.stre-group{
+  display: flex;
+  gap: 64px;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  align-items: center;
+  @include tab{
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  @include sp{
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+.stre-img{
+  width: calc(50% - 24px);
+  @include sp{
+    width: 100%;
+  }
+  img{
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+  }
+}
+.stre-text{
+  width: calc(50% - 24px);
+  @include sp{
+    width: 100%;
+  }
+}
+.stre-number{
+  display: block;
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 16px;
+  font-weight: bold;
+  color: $MainC;
+  @include tab{
+    font-size: 40px;
+  }
+}
+.stre-hed{
+  color: $TextC900;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+.stre-desc{
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 0.02em;
+  font-weight: normal;
+  color: $TextC600;
+  @include tab{
+    font-size: 14px;
+  }
+}
+
+.flex-reverse{
+  @include sp{
+    .stre-img{
+      order: 1;
+    }
+    .stre-text{
+      order: 2;
+    }
+  }
+  
+}
+
+// philosophy
+.philosophy{
+  background-color: $Neutral0;
+  padding: 64px 0;
+  @include tab{
+    padding: 40px 0;
+  }
+}
+.vision{
+  margin-bottom: 48px;
+  @include tab{
+    margin-bottom: 32px;
+  }
+}
+.vision-cont{
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+  @include tab{
+    gap: 40px;
+  }
+  @include sp{
+    gap: 8px;
+    flex-direction: column;
+  }
+}
+.vision-hed{
+  font-size: 28px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: $MainC;
+  width: calc(50% - 32px);
+  @include tab{
+    width: calc(50% - 20px);
+  }
+  @include sp{
+    width: 100%;
+    font-size: 20px;
+  }
+}
+.vision-text{
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  line-height: 2;
+  width: calc(50% - 32px);
+  color: $TextC600;
+  font-weight: normal;
+  @include tab{
+    font-size: 14px;
+    width: calc(50% - 20px);
+  }
+  @include sp{
+    width: 100%;
+  }
+}
+.mission{
+  margin-bottom: 48px;
+  @include tab{
+    margin-bottom: 32px;
+  }
+}
+.mission-cont{
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+  @include tab{
+    gap: 40px;
+  }
+  @include sp{
+    gap: 8px;
+    flex-direction: column;
+  }
+}
+.mission-hed{
+  font-size: 28px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: $MainC;
+  width: calc(50% - 32px);
+  @include tab{
+    width: calc(50% - 20px);
+  }
+  @include sp{
+    font-size: 20px;
+    width: 100%;
+  }
+}
+.mission-text{
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  line-height: 2;
+  width: calc(50% - 32px);
+  color: $TextC600;
+  font-weight: normal;
+  @include tab{
+    width: calc(50% - 20px);
+    font-size: 14px;
+  }
+  @include sp{
+    width: 100%;
+  }
+}
+.value-cont{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  @include tab{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.value-number{
+  display: block;
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 16px;
+  font-weight: bold;
+  color: $MainC100; 
+  @include tab{
+    font-size: 40px;
+  }
+  @include sp{
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+}
+.value-hed{
+  color: $TextC900;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+  @include sp{
+    margin-bottom: 8px;
+  }
+}
+.value-text{
+  font-weight: normal;
+  color: $TextC600;
+  line-height: 2;
+  letter-spacing: 0.02em;
+  font-size: 16px;
+  @include tab{
+    font-size: 14px;
+  }
+}
+
+// News
+.news{
+  padding: 64px 0;
+  background-color: $SubC100;
+  @include tab{
+    padding: 40px 0;
+  }
+}
+.news-cont{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 64px;
+  @include tab{
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 48px;
+  }
+  @include sp{
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+}
+.news-card{
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+  background-color: $Neutral0;
+  &:hover{
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+}
+.news-img{
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+}
+.news-info{
+  padding: 16px 24px 24px;
+}
+.news-date{
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: $MainC;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.news-hed{
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: $TextC900;
+  margin-bottom: 16px;
+  @include sp{
+    font-size: 16px;
+  }
+}
+.news-cate{
+  color: $MainC;
+  font-weight: bold;
+  border-radius: 24px;
+  background-color: $SubC100;
+  padding: 8px 12px;
+  line-height: 1;
+  display: inline-block;
+  font-size: 12px;
+  margin-right: 8px;
+}
+.news-btn-cont{
+  text-align: center;
+}
+
+// contact
+.contact{
+  padding: 64px 0;
+  background-color: $Neutral0;
+  @include tab{
+    padding: 40px 0;
+  }
+}
+.contact-cont{
+  display: flex;
+  gap: 64px;
+  @include tab{
+    gap: 40px;
+  }
+  @include sp{
+    gap: 12px;
+    flex-direction: column;
+  }
+}
+.contact-img-cont{
+  width: calc(50% - 32px);
+  @include sp{
+    width: 100%;
+  }
+  img{
+    width: 100%;
+  }
+}
+.contact-text{
+  width: calc(50% - 32px);
+  @include sp{
+    width: 100%;
+  }
+}
+.contact-hed{
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: $TextC900;
+  margin-bottom: 16px;
+  @include sp{
+    margin-bottom: 8px;
+  }
+}
+.contact-desc{
+  font-weight: normal;
+  color: $TextC600;
+  line-height: 2;
+  letter-spacing: 0.02em;
+  font-size: 16px;
+  margin-bottom: 48px;
+  @include tab{
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+}
+.contact-btn-cont{
+  @include sp{
+    text-align: center;
+
+  }
+}
+
+// company
+.company{
+  padding: 64px 0;
+  background-color: $SubC100;
+  @include tab{
+    padding: 40px 0;
+  }
+}
+.company-info {
+  display: flex;
+  gap: 64px;
+  flex-wrap: wrap;
+  font-size: 16px;
+  @include tab{
+    gap: 40px;
+  }
+}
+
+.info-column {
+  flex: 1 1 400px;
+}
+
+.info-row {
+  display: flex;
+  border-bottom: 1px solid $TextC100;
+  padding: 16px 8px;
+}
+
+.info-row dt {
+  width: 160px;
+  flex-shrink: 0;
+  font-weight: 500;
+  color: $TextC300;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  @include tab{
+    font-size: 14px;
+  }
+}
+
+.info-row dd {
+  margin: 0;
+  flex: 1;
+  line-height: 1.7;
+  color: $TextC900;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  @include tab{
+    font-size: 14px;
+  }
+}
+
+.info-company-col{
+  dd{
+    margin-bottom: 12px;
+  }
+}
+
+// footer
+.footer{
+  padding: 64px 0;
+  background-color: #0d1626;
+  color: $Neutral0;
+  @include tab{
+    padding: 40px 0;
+  }
+}
+.footer-cont{
+  display: flex;
+  justify-content: space-between;
+  @include tab{
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+.footer-img{
+  img{
+    @include sp{
+      width: 50%;
+    }
+  }
+}
+.footer-nav{
+  margin-bottom: 64px;
+  @include tab{
+    margin-bottom: 48px;
+  }
+  ul{
+    display: flex;
+    gap: 24px;
+    @include tab{
+      justify-content: space-between;
+    }
+    @include sp{
+      flex-direction: column;
+      gap: 16px;
+    }
+    a{
+      color: $Neutral0;
+      font-size: 20px;
+      font-weight: 500;
+      transition: all 0.3s;
+      padding: 16px 8px;
+      &:hover{
+        opacity: 0.7;
+      }
+      @include tab{
+        font-size: 16px;
+      }
+    }
+  }
+}
+.footer-copy{
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  @include sp{
+    font-size: 14px;
+  }
+}
+
+// lower
+
+.recruit{
+  background-color: $SubC100;
+  padding: 64px 0 0;
+}
+.rec-message{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+  @include tab{
+    gap: 40px;
+  }
+  @include sp{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 12px;
+  }
+}
+.rec-ttl{
+  font-size: 28px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: $TextC900;
+  @include sp{
+    font-size: 20px;
+  }
+}
+.rec-text{
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 0.02em;
+  color: $TextC600;
+  font-weight: normal;
+  @include tab{
+    font-size: 14px;
+  }
+}
+
+// contact lower
+.contact--l{
+  padding: 64px 0;
+  @include tab{
+    padding: 40px 0;
+  }
+}
+.contact-cont--l{
+  max-width: 800px;
+  margin: 0 auto;
+}
+.contact-ttl--l{
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  color: $TextC900;
+  margin-bottom: 16px;
+  @include tab{
+    margin-bottom: 8px;
+  }
+}
+.contact-desc--l{
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  line-height: 2;
+  color: $TextC600;
+  margin-bottom: 48px;
+  font-weight: normal;
+  @include tab{
+  font-size: 14px;
+  margin-bottom: 32px;
+  }
+}
+
+.contact-form {
+  color: $TextC900;
+}
+
+.form-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  @include sp{
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.form-row.full {
+  flex-direction: column;
+  align-items: flex-start;
+  button{
+    margin: 0 auto;
+  }
+}
+
+label {
+  width: 200px;
+  font-weight: normal;
+  padding-top: 10px;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: $TextC900;
+  @include sp{
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+.required {
+  color: $AccentC;
+  font-size: 14px;
+  margin-left: 4px;
+  @include sp{
+    font-size: 12px;
+  }
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  flex: 1;
+  padding: 16px;
+  font-size: 16px;
+  background: #f7f7f7;
+  border: none;
+  border-radius: 8px;
+  resize: vertical;
+  color: $TextC900;
+  @include sp{
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+textarea {
+  min-height: 200px;
+}
+
+.consent {
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 16px;
+  span{
+    margin-left: 24px;
+  }
+}
+
+.consent a {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+button {
+  background: $MainC;
+  color: white;
+  padding: 14px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s;
+  line-height: 1.5;
+}
+
+// article
+.article{
+  padding: 64px 40px;
+  background-color: $SubC100;
+  @include sp{
+    padding: 20px;
+  }
+}
+.art-cont{
+  max-width: 880px;
+  margin: 0 auto;
+  background-color: $Neutral0;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  @include sp{
+    padding: 20px;
+  }
+}
+.art-date{
+  font-size: 14px;
+  color: $MainC;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+  font-weight: bold;
+  display: block;
+}
+.art-ttl{
+  font-size: 28px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+  color: $TextC900;
+  @include sp{
+    font-size: 20px;
+  }
+}
+.art-cate{
+  padding: 8px 12px;
+  font-size: 12px;
+  color: $MainC;
+  background-color: $SubC100;
+  border-radius: 16px;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.art-img{
+  width: 100%;
+  margin-bottom: 24px;
+  @include sp{
+    margin-bottom: 16px;
+  }
+}
+.art-para{
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 0.02em;
+  color: $TextC900;
+  margin-bottom: 16px;
+  font-weight: normal;
+  @include sp{
+    font-size: 14px;
+  }
+}
+.art-list{
+  margin-bottom: 16px;
+  margin-left: 24px;
+  li{
+    list-style-type: disc;
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 0.02em;
+    color: $TextC900;
+    font-weight: normal;
+    @include sp{
+    font-size: 14px;
+    }
+  }
+}
+
+// pending
+.pending{
+  padding: 64px 0;
+  background-color: $Neutral0;
+  @include tab{
+    padding: 40px 0;
+  }
+}
+.pend-cont{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+  @include tab{
+    gap: 40px;
+  }
+  @include sp{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+.pend-img{
+  img{
+    width: 100%;
+  }
+}
+.pend-text{
+  padding: 40px 0;
+  @include tab{
+    padding: 0;
+  }
+}
+.pend-ttl{
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: $TextC900;
+  margin-bottom: 16px;
+  @include sp{
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+}
+.pend-desc{
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 0.02em;
+  color: $TextC600;
+  margin-bottom: 48px;
+  font-weight: normal;
+  @include tab{
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+  @include sp{
+    margin-bottom: 24px;
+  }
+}
+.pend-btn{
+  @include sp{
+    text-align: center;
+  }
+}
+
+
+// animation
+.fadein {
+  opacity: 0; 
+  transform: translateY(50px);
+  transition: all 0.5s ease-in-out;
+}
+.fadein.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+.scroll-fadein {
+  opacity: 0; 
+  transform: translateY(50px);
+  transition: all 0.5s ease-in-out;
+}
+.scroll-fadein.show{
+  opacity: 1;
+  transform: translateY(0);
+}

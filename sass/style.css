@@ -220,7 +220,7 @@ select:focus {
 }
 
 .primary-btn01 {
-  padding: 12px 16px !important;
+  padding: 12px 16px;
   text-align: center;
   border-radius: 8px;
   background-color: #436fc0;
@@ -334,11 +334,18 @@ select:focus {
   font-weight: bold !important;
 }
 
+.pt130 {
+  padding-top: 130px;
+}
+
 .header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   background-color: #fff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   z-index: 100;
-  position: relative;
 }
 
 .header-cont {
@@ -389,7 +396,7 @@ select:focus {
 }
 .header-nav-list .header-contact a {
   color: #fff;
-  padding: 16px;
+  padding: 12px 16px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
@@ -514,7 +521,12 @@ select:focus {
 }
 
 .mv {
-  padding: 40px 0;
+  padding: 130px 0 40px;
+}
+@media (max-width: 768px) {
+  .mv {
+    padding-top: 120px;
+  }
 }
 
 .mv-cont {
@@ -1374,7 +1386,12 @@ select:focus {
 
 .recruit {
   background-color: #ecf1f9;
-  padding: 64px 0 0;
+  padding: 154px 0 0;
+}
+@media (max-width: 768px) {
+  .recruit {
+    padding-top: 114px;
+  }
 }
 
 .rec-message {
@@ -1420,11 +1437,16 @@ select:focus {
 }
 
 .contact--l {
-  padding: 64px 0;
+  padding: 154px 0 64px;
 }
 @media (max-width: 992px) {
   .contact--l {
-    padding: 40px 0;
+    padding: 134px 0 40px;
+  }
+}
+@media (max-width: 768px) {
+  .contact--l {
+    padding-top: 114px;
   }
 }
 
@@ -1527,7 +1549,7 @@ textarea {
   input[type=text],
   input[type=email],
   textarea {
-    font-size: 14px;
+    font-size: 16px;
     width: 100%;
   }
 }
@@ -1564,12 +1586,12 @@ button {
 }
 
 .article {
-  padding: 64px 40px;
+  padding: 154px 40px 64px;
   background-color: #ecf1f9;
 }
 @media (max-width: 768px) {
   .article {
-    padding: 20px;
+    padding: 114px 20px 20px;
   }
 }
 
@@ -1664,12 +1686,17 @@ button {
 }
 
 .pending {
-  padding: 64px 0;
+  padding: 144px 64px 64px;
   background-color: #fff;
 }
 @media (max-width: 992px) {
   .pending {
-    padding: 40px 0;
+    padding: 144px 40px 40px;
+  }
+}
+@media (max-width: 768px) {
+  .pending {
+    padding: 124px 20px 40px;
   }
 }
 
@@ -1763,4 +1790,13 @@ button {
 .scroll-fadein.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.pt130 {
+  padding-top: 130px;
+}
+@media (max-width: 768px) {
+  .pt130 {
+    padding-top: 112px;
+  }
 }/*# sourceMappingURL=style.css.map */

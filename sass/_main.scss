@@ -23,10 +23,12 @@
 
 .header-logo{
   transition: all 0.3s;
+  display: block;
   &:hover{
     opacity: 0.7;
   }
   img{
+    display: block;
     @include sp{
       width: 80%;
     }
@@ -44,6 +46,7 @@
       line-height: 1;
       transition: all 0.3s;
       padding: 16px 8px;
+      letter-spacing: 0.04em;
       &:hover{
         color: $MainC;
       }
@@ -54,7 +57,7 @@
       color: $Neutral0;
       padding: 12px 16px;
       font-weight: 500;
-      font-size: 16px;
+      font-size: 20px;
       line-height: 1;
       &:hover{
         color: $Neutral0;
@@ -242,6 +245,7 @@
   }
   img{
     width: 100%;
+    height: auto;
   }
 }
 
@@ -347,6 +351,7 @@
 }
 .work-img{
   width: 100%;
+  height: auto;
   margin-bottom: 8px;
 }
 .work-cate{
@@ -421,6 +426,7 @@
   img{
     display: block;
     width: 100%;
+    height: auto;
     border-radius: 12px;
   }
 }
@@ -652,6 +658,7 @@
 }
 .news-img{
   width: 100%;
+  height: auto;
   border-radius: 12px 12px 0 0;
 }
 .news-info{
@@ -716,6 +723,7 @@
   }
   img{
     width: 100%;
+    height: auto;
   }
 }
 .contact-text{
@@ -832,6 +840,7 @@
   img{
     @include sp{
       width: 50%;
+      height: auto;
     }
   }
 }
@@ -1093,6 +1102,7 @@ button {
 }
 .art-img{
   width: 100%;
+  height: auto;
   margin-bottom: 24px;
   @include sp{
     margin-bottom: 16px;
@@ -1133,7 +1143,7 @@ button {
     padding: 144px 40px 40px;
   }
   @include sp{
-    padding: 124px 20px 40px;
+    padding: 124px 0px 40px;
   }
 
 }
@@ -1152,6 +1162,7 @@ button {
 .pend-img{
   img{
     width: 100%;
+    height: auto;
   }
 }
 .pend-text{

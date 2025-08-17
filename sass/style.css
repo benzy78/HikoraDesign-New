@@ -246,6 +246,12 @@ select:focus {
   letter-spacing: 0.02em;
   line-height: 1.5;
 }
+@media (max-width: 768px) {
+  .primary-btn02 {
+    width: 100%;
+    display: block;
+  }
+}
 .primary-btn02:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: #36599a;
@@ -354,9 +360,13 @@ select:focus {
 
 .header-logo {
   transition: all 0.3s;
+  display: block;
 }
 .header-logo:hover {
   opacity: 0.7;
+}
+.header-logo img {
+  display: block;
 }
 @media (max-width: 768px) {
   .header-logo img {
@@ -377,6 +387,7 @@ select:focus {
   line-height: 1;
   transition: all 0.3s;
   padding: 16px 8px;
+  letter-spacing: 0.04em;
 }
 .header-nav-list li a:hover {
   color: #436fc0;
@@ -388,7 +399,7 @@ select:focus {
   color: #fff;
   padding: 12px 16px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1;
 }
 .header-nav-list .header-contact a:hover {
@@ -590,6 +601,7 @@ select:focus {
 }
 .mv-image img {
   width: 100%;
+  height: auto;
 }
 
 .services {
@@ -721,6 +733,7 @@ select:focus {
 
 .work-img {
   width: 100%;
+  height: auto;
   margin-bottom: 8px;
 }
 
@@ -812,6 +825,7 @@ select:focus {
 .stre-img img {
   display: block;
   width: 100%;
+  height: auto;
   border-radius: 12px;
 }
 
@@ -1108,6 +1122,7 @@ select:focus {
 
 .news-img {
   width: 100%;
+  height: auto;
   border-radius: 12px 12px 0 0;
 }
 
@@ -1189,6 +1204,7 @@ select:focus {
 }
 .contact-img-cont img {
   width: 100%;
+  height: auto;
 }
 
 .contact-text {
@@ -1323,6 +1339,7 @@ select:focus {
 @media (max-width: 768px) {
   .footer-img img {
     width: 50%;
+    height: auto;
   }
 }
 
@@ -1637,6 +1654,7 @@ button {
 
 .art-img {
   width: 100%;
+  height: auto;
   margin-bottom: 24px;
 }
 @media (max-width: 768px) {
@@ -1688,7 +1706,7 @@ button {
 }
 @media (max-width: 768px) {
   .pending {
-    padding: 124px 20px 40px;
+    padding: 124px 0px 40px;
   }
 }
 
@@ -1711,6 +1729,7 @@ button {
 
 .pend-img img {
   width: 100%;
+  height: auto;
 }
 
 .pend-text {

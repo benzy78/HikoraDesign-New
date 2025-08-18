@@ -793,7 +793,7 @@
   width: 160px;
   flex-shrink: 0;
   font-weight: 500;
-  color: $TextC300;
+  color: $TextC600;
   font-weight: normal;
   letter-spacing: 0.02em;
   @include tab{
@@ -814,7 +814,7 @@
 }
 
 .info-company-col{
-  dd{
+  li{
     margin-bottom: 12px;
   }
 }

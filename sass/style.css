@@ -1286,7 +1286,7 @@ select:focus {
   width: 160px;
   flex-shrink: 0;
   font-weight: 500;
-  color: rgba(27, 44, 77, 0.5);
+  color: rgba(27, 44, 77, 0.7);
   font-weight: normal;
   letter-spacing: 0.02em;
 }
@@ -1310,7 +1310,7 @@ select:focus {
   }
 }
 
-.info-company-col dd {
+.info-company-col li {
   margin-bottom: 12px;
 }
 
